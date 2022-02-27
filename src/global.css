@@ -1,0 +1,175 @@
+/*
+https://www.csscolorpalettes.com/palettes/1652#palette
+
+*/
+
+body{
+  margin: 0%;
+}
+
+#root{
+  height:100%;
+  width: 100%;
+}
+
+:root {
+  --backgroundColor: #fff;
+
+  --textColor: #121416d8;
+  --linkColor: #543fd7;
+
+  /* default color */
+  --primary-header: #303841;
+  --primary-content: #eeeeee;
+
+  --secondary-header: #47555e;
+  --tertiary-header: #7aa5d2;
+  
+
+  --primary-color:#52616b;
+  --secondary-color:#c9d6df; 
+  --tertiary-color:#f0f5f9; 
+
+  --positive-color:#82b74b;
+  --negtive-color:#ff0000;
+/* event color change  */
+
+
+/* message color */
+  --infoColor:#87bdd8;
+  --successColor:#96ceb4;
+  --errorColor:#ffcc5c;
+  --warnColor:#ff6f69;
+
+/* test  */
+  --test-color:red;
+  --test-color2:red;
+}
+
+html[data-theme='light'] {
+  --backgroundColor: #fff;
+  --textColor: #121416d8;
+  --linkColor: #543fd7;
+  --primaryHeader: gray;
+}
+
+html[data-theme='dark'] {
+  --backgroundColor: #212a2e;
+  --textColor: #F7F8F8;
+  --linkColor: #828fff;
+  --primaryHeader: black;
+}
+
+body {
+  background: var(--backgroundColor);
+  color: var(--textColor);
+}
+
+a {
+  color: var(--linkColor);
+}
+
+label{
+  color: var(--textColor);
+}
+
+a:hover {
+  text-decoration: underline;
+  filter: brightness(80%);
+}
+
+.imgbtn{
+  background:gray;
+}
+
+.imgbtn:hover{
+  background:rgb(211, 211, 211);
+}
+
+.headerp{
+  background: var(--primaryheader);
+  color: var(--textColor)
+}
+/* UI */
+
+.info{
+  background-color: var(--infoColor);
+}
+
+.success{
+  background-color: var(--successColor);
+}
+
+.error{
+  background-color: var(--errorColor);
+}
+
+.warn{
+  background-color: var(--warnColor);
+}
+/* BUTTON */
+
+.btn_pri
+,.btn_sec
+,.btn_ter
+,.btn_pos
+,.btn_neg {
+  display:inline-block;
+	cursor:pointer;
+  text-decoration:none;
+  border: 0;
+}
+
+.btn_pri:active,
+.btn_sec:active,
+.btn_ter:active,
+.btn_pos:active,
+.btn_neg:active {
+	position:relative;
+	top:1px;
+}
+
+.btn_pri{
+  background-color: var(--primary-color);
+}
+.btn_pri:hover {
+	background-color:#5cbf2a;
+}
+.btn_sec{
+  background-color: var(--secondary-color);
+}
+.btn_sec:hover {
+	background-color:#5cbf2a;
+}
+
+.btn_ter{
+  background-color: var(--tertiary-color);
+}
+.btn_ter:hover {
+	background-color:#5cbf2a;
+}
+
+.btn_pos{
+  background-color: var(--positive-color);
+}
+.btn_pos:hover {
+	background-color:#5cbf2a;
+}
+
+.btn_neg{
+  background-color: var(--negtive-color);
+}
+
+
+/*  TEST  */
+.testcolor{
+  color:var(--test-color);
+}
+
+.testcolor2{
+  color:var(--test-color2);
+}
+
+.blank{
+  background: gray;
+}
