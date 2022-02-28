@@ -2,10 +2,29 @@
 
 # Created by: Lightnet
 
+# packages:
+- react
+- vite
+- rollup
+
 # Information:
     To build simple ui and test them for other project builds for ui used.
 
-    It need to build with the babel.js with the import or esmodule format. For the server and client to work together.
+    It need to build with the babel.js as ES module format. That compile for browser javascript can be understand. For the server and client to work together.
+
+    Vite.js is all in one compiler, server and hot reload front end web page render.
+
+    With the mode some simple modified server to run backend for request and reponse.
+
+    With the use of the react.js component and module design for UI and html element design to reduce some coding.
+
+## Links:
+- https://vitejs.dev/
+- https://github.com/vitejs/vite
+- https://rollupjs.org/guide/en/
+- https://reactjs.org/
+- https://nodejs.org/
+- https://babeljs.io/
 
 # Set up:
     Install the nodejs.
