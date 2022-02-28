@@ -143,7 +143,8 @@ if (!isTest) {
       })
 
       server.on('listening', function() {
-        console.log("listen...", server.address())
+        //console.log("listen...", server.address())
+        console.log("listen IP:", server.address().address, " PORT:", server.address().port)
       });
     
       server.on('connection', function() {

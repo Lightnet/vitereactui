@@ -14,7 +14,7 @@
 
     Vite.js is all in one compiler, server and hot reload front end web page render.
 
-    With the mode some simple modified server to run backend for request and reponse.
+    With the some simple modified server script to run backend for request and reponse.
 
     With the use of the react.js component and module design for UI and html element design to reduce some coding.
 

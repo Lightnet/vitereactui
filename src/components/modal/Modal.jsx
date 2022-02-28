@@ -106,7 +106,8 @@ export default function Modal({children,title,isOpen,pos,pheight,pwidth,onClose,
     setIsPress(false);
   }
 
-  function closeEWindow(){
+  function closeEWindow(e){
+    e.preventDefault();
     console.log('close');
     if(typeof onClose !== 'undefined'){
       if(typeof updatePos !== 'undefined'){
@@ -140,9 +141,9 @@ export default function Modal({children,title,isOpen,pos,pheight,pwidth,onClose,
   }
 
   return (<>
-    <div ref={ref} className={styles.model} style={style}>
+    <div ref={ref} className={styles.modal} style={style}>
       <div 
-        className={styles.header} 
+        className={styles.modalHeader} 
         onMouseDown={dragMouseDown}
         onMouseMove={OnMouseMove}
         onMouseUp={OnMouseUp}

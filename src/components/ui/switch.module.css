@@ -2,8 +2,8 @@
   position: relative;
   display: inline-block;
   width: 40px;
-  height: 22px;
-  top:-12px;
+  height: 20px;
+  /*top:-12px;*/
 }
 
 .switch input { 
@@ -30,7 +30,7 @@
   height: 16px;
   width: 16px;
   left: 4px;
-  bottom: 3px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;

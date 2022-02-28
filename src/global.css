@@ -12,6 +12,11 @@ body{
   width: 100%;
 }
 
+#app{
+  height:100%;
+  width: 100%;
+}
+
 :root {
   --backgroundColor: #fff;
 
@@ -19,19 +24,29 @@ body{
   --linkColor: #543fd7;
 
   /* default color */
-  --primary-header: #303841;
-  --primary-content: #eeeeee;
+  /* MODAL */
+  --header-color:#374148;
+  --header-text:#d4dade;
 
-  --secondary-header: #47555e;
-  --tertiary-header: #7aa5d2;
-  
+  --modal-content:#d4dade;
+  --modal-text:#374148;
 
+  /* BUTTON */
   --primary-color:#52616b;
+  --primary-hover:#6f8390;
+
   --secondary-color:#c9d6df; 
+  --secondary-hover:#9fb6c6;
+
   --tertiary-color:#f0f5f9; 
+  --tertiary-hover:#b6cee2; 
 
   --positive-color:#82b74b;
+  --positive-hover:#67923a;
+
   --negtive-color:#ff0000;
+  --negtive-hover:#DC143C;
+
 /* event color change  */
 
 
@@ -42,8 +57,7 @@ body{
   --warnColor:#ff6f69;
 
 /* test  */
-  --test-color:red;
-  --test-color2:red;
+
 }
 
 html[data-theme='light'] {
@@ -78,20 +92,7 @@ a:hover {
   filter: brightness(80%);
 }
 
-.imgbtn{
-  background:gray;
-}
-
-.imgbtn:hover{
-  background:rgb(211, 211, 211);
-}
-
-.headerp{
-  background: var(--primaryheader);
-  color: var(--textColor)
-}
-/* UI */
-
+/* UI MESSAGE */
 .info{
   background-color: var(--infoColor);
 }
@@ -108,7 +109,6 @@ a:hover {
   background-color: var(--warnColor);
 }
 /* BUTTON */
-
 .btn_pri
 ,.btn_sec
 ,.btn_ter
@@ -133,43 +133,47 @@ a:hover {
   background-color: var(--primary-color);
 }
 .btn_pri:hover {
-	background-color:#5cbf2a;
+	background-color: var(--primary-hover);
 }
 .btn_sec{
   background-color: var(--secondary-color);
 }
 .btn_sec:hover {
-	background-color:#5cbf2a;
+	background-color:var(--secondary-hover);
 }
 
 .btn_ter{
   background-color: var(--tertiary-color);
 }
 .btn_ter:hover {
-	background-color:#5cbf2a;
+	background-color: var(--tertiary-hover);
 }
 
 .btn_pos{
   background-color: var(--positive-color);
 }
 .btn_pos:hover {
-	background-color:#5cbf2a;
+	background-color:var(--positive-hover);
 }
 
 .btn_neg{
   background-color: var(--negtive-color);
 }
+.btn_neg:hover {
+	background-color:var(--negtive-hover);
+}
+
+/*  SELECT  */
+.Select {
+  background-color: DodgerBlue;
+  /*text-decoration:none;*/
+  border: 0;
+}
+
+
 
 
 /*  TEST  */
-.testcolor{
-  color:var(--test-color);
-}
-
-.testcolor2{
-  color:var(--test-color2);
-}
-
 .blank{
   background: gray;
 }

@@ -4,15 +4,19 @@
 */
 
 import React, { useState } from "react";
+import Modal from "../components/modal/Modal";
 import Blank from "../components/template/Blank";
 import ThemeLink from "../components/theme/ThemeLink";
 import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";
+import Select from "../components/ui/Select";
+import Switch from "../components/ui/Switch";
 import { nanoid16 } from "../lib/helper.mjs";
 
 export default function Home() {
 
   const [ranID, setRanID] = useState("ranid")
+  const [isOpenModal, setIsOpenModal] = useState(false)
 
   async function clickApiFetch1(){
     let rep = await fetch('/json');
@@ -28,6 +32,14 @@ export default function Home() {
 
   function clickRanID(){
     setRanID(nanoid16())
+  }
+
+  function clickOpenModal(){
+    setIsOpenModal(true)
+  }
+
+  function onCloseModal(){
+    setIsOpenModal(false)
   }
 
   return (
@@ -52,6 +64,44 @@ export default function Home() {
       <input />
       <Input />
 
+      <br/>
+      <br/> <Switch/> <button> default </button>
+      <br/> <Switch round/> <button> default </button>
+      <br/>
+      <Select>
+        <option value="0">Select car:</option>
+        <option value="1">Audi</option>
+        <option value="2">BMW</option>
+        <option value="3">Citroen</option>
+        <option value="4">Ford</option>
+        <option value="5">Honda</option>
+        <option value="6">Jaguar</option>
+        <option value="7">Land Rover</option>
+        <option value="8">Mercedes</option>
+        <option value="9">Mini</option>
+        <option value="10">Nissan</option>
+        <option value="11">Toyota</option>
+        <option value="12">Volvo</option>
+      </Select>
+
+      <br/>
+      <br/><button onClick={clickOpenModal}> Modal </button>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <Modal isOpen={isOpenModal} onClose={onCloseModal}>
+        <label> Test </label>
+
+      </Modal>
     </>
   )
 }
