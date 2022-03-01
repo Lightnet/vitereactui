@@ -3,7 +3,6 @@
   display: inline-block;
   width: 40px;
   height: 20px;
-  /*top:-12px;*/
 }
 
 .switch input { 
@@ -31,17 +30,17 @@
   width: 16px;
   left: 4px;
   bottom: 2px;
-  background-color: white;
+  background-color: var(--switch-default);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: var(--switch-color);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px var(--switch-color);
 }
 
 input:checked + .slider:before {

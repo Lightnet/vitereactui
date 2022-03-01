@@ -33,7 +33,7 @@ export default function Switch({checked,onChange,round}){
   },[checked])
 
   const emitChange = e => {
-    //console.log(e.target.checked)
+    console.log(e.target.checked)
     setCheckBox(e.target.checked);
     if(typeof onChange == 'function'){
       onChange({

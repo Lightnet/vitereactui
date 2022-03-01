@@ -6,8 +6,6 @@
 // https://stackoverflow.com/questions/20926551/recommended-way-of-making-react-component-div-draggable
 
 import React,{ useRef, useEffect, useState } from 'react';
-import Button from '../ui/Button';
-
 import styles from "./modal.module.css";
 
 export default function Modal({children,title,isOpen,pos,pheight,pwidth,onClose,updatePos,resize,isdrag}) {
@@ -159,6 +157,3 @@ export default function Modal({children,title,isOpen,pos,pheight,pwidth,onClose,
     </div>
   </>);
 }
-/*
-<Button> Test</Button>
-*/
