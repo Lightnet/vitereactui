@@ -3,6 +3,8 @@
   Created by: Lightnet
 */
 
+// https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+// https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css
 import React, { useEffect, useState } from "react";
 
 export default function CheckBox({checked,onChange}){
@@ -30,5 +32,5 @@ export default function CheckBox({checked,onChange}){
     }
   };
 
-  return <input type="checkbox" checked={checkBox} onChange={emitChange} />
+  return <input className="CheckBox"  type="checkbox" checked={checkBox} onChange={emitChange} />
 }

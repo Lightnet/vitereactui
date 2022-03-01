@@ -8,7 +8,9 @@ import Modal from "../components/modal/Modal";
 import Blank from "../components/template/Blank";
 import ThemeLink from "../components/theme/ThemeLink";
 import Button from "../components/ui/Button";
+import CheckBox from "../components/ui/Checkbox";
 import Input from "../components/ui/Input";
+import Progress from "../components/ui/Progress";
 import Select from "../components/ui/Select";
 import Switch from "../components/ui/Switch";
 import { nanoid16 } from "../lib/helper.mjs";
@@ -87,8 +89,8 @@ export default function Home() {
       <br/>
       <br/><button onClick={clickOpenModal}> Modal </button>
       <br/>
-      <br/>
-      <br/>
+      <br/><Progress value={10}/> <button> default </button>
+      <br/><CheckBox/> <button> default </button>
       <br/>
       <br/>
       <br/>

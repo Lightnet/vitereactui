@@ -1,4 +1,4 @@
-# vite react ui
+# Vite React UI
 
 # Created by: Lightnet
 

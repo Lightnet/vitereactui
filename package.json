@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node server.mjs",
+    "dev": "nodemon watchnode.mjs",
+    "dev1": "node server.mjs",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
@@ -14,10 +15,12 @@
   },
   "dependencies": {
     "axios": "^0.26.0",
+    "chalk": "^5.0.0",
     "compression": "^1.7.4",
     "dayjs": "^1.10.7",
     "express": "^4.17.3",
     "nanoid": "^3.3.1",
+    "nodemon": "^2.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",

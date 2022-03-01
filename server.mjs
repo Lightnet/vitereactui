@@ -6,6 +6,7 @@
 // https://stackoverflow.com/questions/5738552/how-to-create-custom-event-listener-in-node-js-express-js
 
 // @ts-check
+import chalk from 'chalk';
 import fs from 'fs'
 //import path, { dirname } from 'path'
 import path from 'path'
@@ -15,10 +16,6 @@ console.log(__dirname);
 import compression from 'compression';
 import serveStatic from "serve-static";
 import { createServer } from "vite";
-//const __dirname = dirname(fileURLToPath(import.meta.url));
-//const __dirname = new URL('.', import.meta.url).pathname;
-//const __filename = fileURLToPath(import.meta.url)
-//const __dirname = dirname(__filename)
 import express from 'express';
 import routes from "./src/server/routes.mjs";
 
@@ -31,6 +28,7 @@ console.log("env.HOST:", process.env.HOST)
 
 const PORT =  process.env.PORT || 3000;
 const HOST =  process.env.HOST || "0.0.0.0";
+const log = console.log;
 
 
 async function vitecreateServer(
@@ -42,7 +40,7 @@ async function vitecreateServer(
   const indexProd = isProd
     ? fs.readFileSync(resolve('dist/client/index.html'), 'utf-8')
     : ''
-  console.log("init web server and hot reload SSR...")
+  
   const app = express()
   app.use(routes);
 
@@ -139,30 +137,26 @@ if (!isTest) {
       const server = app.listen(PORT, () => {
         //app.emit('listening');
         //console.log("dev:")
-        console.log('http://localhost:3000')
+        log(chalk.green(`http://localhost:${PORT}`))
       })
 
-      server.on('listening', function() {
+      server.on('listening', function() { //works
+        //console.log("init web server and hot reload SSR...")
         //console.log("listen...", server.address())
-        console.log("listen IP:", server.address().address, " PORT:", server.address().port)
+        let ipaddress = server.address().address;
+        let port = server.address().port;
+
+        log("listen IP:", chalk.green(ipaddress), " PORT:", port)
       });
     
-      server.on('connection', function() {
-        console.log("connection...")
-      });
-
-      server.on('mount', function() {
-        console.log("mount...")
-      });
+      //server.on('connection', function() { //works
+        //console.log("connection...")
+      //});
     
       server.on('close', function() {
         console.log("close...")
       });
-    
-      server.on('ready', function() {
-        console.log("ready...")
-      });
-
+      
       return app;
     }
   )

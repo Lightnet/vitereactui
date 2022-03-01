@@ -46,3 +46,4 @@ export function unixToDate(unix){
 export function capitalizeFirstLetter(s) {
   return s && s[0].toUpperCase() + s.slice(1);
 }
+
