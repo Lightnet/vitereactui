@@ -7,6 +7,9 @@
 - vite
 - rollup
 
+# Notes:
+ - .cjs, .mjs, .jsx and .js in config build to complie for prerender fixed.
+
 # Information:
 
 To build simple ui and test them for other project builds for ui used.
