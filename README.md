@@ -23,12 +23,17 @@ With the some simple modified server script to run backend for request and repon
 With the use of the react.js component and module design for UI and html element design to reduce some coding.
 
 ## Links:
+- https://github.com/vitejs/vite/tree/main/packages/playground/ssr-react
 - https://vitejs.dev/
 - https://github.com/vitejs/vite
 - https://rollupjs.org/guide/en/
 - https://reactjs.org/
 - https://nodejs.org/
 - https://babeljs.io/
+- https://v5.reactrouter.com/web/guides/server-rendering
+- https://v5.reactrouter.com/web/api/StaticRouter
+- https://v5.reactrouter.com/web/guides/server-rendering
+
 
 # Set up:
     Install the nodejs.
@@ -71,16 +76,3 @@ ESM, import > filename.mjs
 # Link refs:
 - https://redfin.engineering/node-modules-at-war-why-commonjs-and-es-modules-cant-get-along-9617135eeca1?gi=e96f10e79c01
 - https://stackoverflow.com/questions/40900270/express-js-event-list
-
-
-
-
-
-
-
-
-
-
-
-
-

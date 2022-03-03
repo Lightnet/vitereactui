@@ -9,9 +9,9 @@ import { StaticRouter } from 'react-router-dom/server'
 import { App } from './App'
 import { ThemeProvider } from './components/theme/ThemeProvider'
 
-export function render(url) {
+export function render(url, context) {
   return ReactDOMServer.renderToString(
-    <StaticRouter location={url} >
+    <StaticRouter location={url} context={context}>
       <ThemeProvider>
         <App />
       </ThemeProvider>
